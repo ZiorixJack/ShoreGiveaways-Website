@@ -1,0 +1,387 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a1612;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #0d1f1a;
+    border-bottom: 3px solid #2ecc71;
+    box-shadow: 0 2px 10px rgba(46, 204, 113, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+    border: 2px solid #2ecc71;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2ecc71;
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e4d3d 0%, #0a1612 100%);
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 3px solid #2ecc71;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+}
+
+.hero .launch-date {
+    font-size: 1.1rem;
+    color: #27ae60;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(46, 204, 113, 0.15);
+    display: inline-block;
+    border-radius: 25px;
+    border: 2px solid #2ecc71;
+}
+
+/* Staff Hero */
+.staff-hero {
+    background: linear-gradient(135deg, #1e4d3d 0%, #0a1612 100%);
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 3px solid #2ecc71;
+}
+
+.staff-hero h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+}
+
+.staff-hero p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #2ecc71;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Giveaway Cards */
+.giveaway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.giveaway-card {
+    background-color: #0d1f1a;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #2ecc71;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.giveaway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}
+
+.giveaway-card h3 {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.giveaway-card p {
+    color: #b0b0b0;
+    margin-bottom: 1.5rem;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status.active {
+    background-color: #27ae60;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* About Section */
+.about {
+    background-color: #0d1f1a;
+    border-top: 2px solid #2ecc71;
+    border-bottom: 2px solid #2ecc71;
+}
+
+.about p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+/* Staff Section */
+.staff-section {
+    padding: 3rem 0;
+}
+
+.staff-section h2 {
+    margin-bottom: 2rem;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.staff-grid.featured {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.staff-card {
+    background-color: #0d1f1a;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #2ecc71;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}
+
+.staff-card.featured-card {
+    border: 3px solid #f39c12;
+    box-shadow: 0 4px 20px rgba(243, 156, 18, 0.4);
+}
+
+.staff-card.featured-card:hover {
+    box-shadow: 0 8px 30px rgba(243, 156, 18, 0.6);
+}
+
+.staff-avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.staff-card h3 {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.staff-role {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.staff-card p {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Discord Section */
+.discord {
+    background-color: #0d1f1a;
+    border-top: 2px solid #2ecc71;
+    border-bottom: 2px solid #2ecc71;
+    text-align: center;
+}
+
+.discord h2 {
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.discord p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #5865f2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #5865f2;
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+}
+
+.discord-button:hover {
+    background-color: #4752c4;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.5);
+}
+
+.discord-icon {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1f1a;
+    border-top: 3px solid #2ecc71;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: #b0b0b0;
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #27ae60;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .giveaway-grid,
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+}
